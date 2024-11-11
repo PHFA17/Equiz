@@ -1,0 +1,376 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --afterContent: ;
+    --contentLeft: 33px;
+}
+
+header, footer{
+    background-color: #133C6D;
+    text-align: center;
+    color: white;
+    width: 100%; height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 21;
+}
+
+#comeco{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.respostas{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: auto;
+    width: 66.76%;
+    font-size: 22px;
+    font-weight: 340;
+}
+
+.retangulos{
+    width: 100%;
+    min-height: 5vh; 
+    height: max-content;
+    border: solid 1px rgb(107, 107, 107);
+    border-radius: 6px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.retangulos:hover{
+    background-color: rgba(128, 128, 128, 0.103);
+    transition: .2s;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer h1, footer h2{
+    font-weight: 300;
+    width: max-content;
+}
+
+footer h1{
+    font-size: 20px;
+}
+
+footer h2{
+    font-size: 15px;
+    text-align: left;
+    width: 365.67px;
+}
+
+#pergunta{
+    width: 66.76%;
+    margin: 0px auto 20px auto;
+}
+
+body:has(#final.show) #progresso{
+    bottom: 50px;
+}
+
+#progresso{
+    width: 66.76%; height: max-content;
+    margin: auto;
+    margin-bottom: 55px;
+    margin-top: 30px;
+    bottom: 00px;
+    position: relative;
+    z-index: 20;
+    transition: 0s;
+}
+
+#progresso div{
+    width: 100%; height: 3px; /* Aqui muda o tamanho da barra em porcentagem*/
+    background-color: #FC9700;
+    transition: 0.7s;
+    z-index: 20;
+}
+
+#progresso div::after{
+    content: var(--afterContent);
+    position: relative;
+    left: calc(100% - var(--contentLeft));
+    top: 3px;
+}
+
+.setas{
+    background-color: #133C6D;
+    border-radius: 100%;
+    padding: 10px;
+    border: 0;
+    width: 55px;
+    height: 55px;
+}
+
+.setas:hover{
+    background-color: #185096;
+    transition: .3s;
+}
+
+#botoes{
+    width: 66.76%; height: max-content;
+    padding-top: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 24;
+}
+
+#home{
+    z-index: 10;
+    height: 100lvh;
+    overflow: scroll;
+    padding: 100px 0 100px 0;
+}
+
+#animacao{
+    animation-name: desaparecer;
+    animation-iteration-count: 1;
+    animation-duration: 5.6s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+    backdrop-filter: blur(5);
+    position: absolute;
+    right: 100%;
+}
+
+#animacao img{
+    width: 90%;
+}
+
+#info{
+    height: 100vh; width: 100%;
+    z-index: 22;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    animation-name: desaparecer;
+    right: 100%;
+    opacity: 0;
+    animation-iteration-count: 1;
+    animation-duration: 15s; 
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+    backdrop-filter: blur(5);
+}
+
+#info h1{
+    font-size: 35px;
+    margin-top: 40px;
+}
+
+#info h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+#info h3{
+    font-size: 30px;
+    font-weight: 220;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#info h4{
+    font-size: 20px;
+    position: relative;
+    top: 140px;
+    color: grey;
+    text-align: center;
+}
+
+.retangulos:nth-child(1)::before{
+    content: "A- ";
+    margin-right: 5px;
+}
+.retangulos:nth-child(2)::before{
+    content: "B- ";
+    margin-right: 5px;
+}
+.retangulos:nth-child(3)::before{
+    content: "C- ";
+    margin-right: 5px;
+}
+.retangulos:nth-child(4)::before{
+    content: "D- ";
+    margin-right: 5px;
+}
+
+#final{
+    height: 100lvh;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    z-index: 22;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    visibility: hidden;
+}
+
+#final.show{
+    visibility: visible;
+}
+
+body:has(#final.show) .retangulos, .respostas #pergunta{
+    display: none;
+}
+
+#recomecar{
+    display: none;
+}
+
+body:has(#final.show) #recomecar{
+    display: flex;
+    cursor: pointer;
+}
+
+.setas{
+    cursor: pointer;
+}
+
+body:has(#final.show) #botoes{
+    position: relative;
+    top: 250px;
+    z-index: 23;
+}
+
+body:has(#final.show) #progresso{
+    bottom: 150px;
+    z-index: 23;
+    transition: 0s;
+}
+
+body:has(#final.show) #avancar{
+    pointer-events: none;
+}
+
+body:has(#final.show) #avancar{
+    background-color: #3b4d63;
+}
+
+#final h1{
+    font-size: 30px;
+    color: black;
+    opacity: 2.2;
+    font-weight: 500;
+    margin: 90px 0 15px 0;
+}
+#final h2{
+    font-size: 30px;
+    color: black;
+    opacity: 0.9;
+    font-weight: 400;
+    width: 66.76%;
+    text-align: center;
+}
+#final h3{
+    font-size: 32px;
+    text-align: center;
+    color: black;
+    opacity: 0.9;
+    font-weight: 300;
+    margin-top: 20px;
+}
+#final h4{
+    margin-top: 40px;
+    font-size: 32px;
+    text-align: center;
+    color: black;
+    opacity: 0.9;
+    font-weight: 300;
+    margin-top: 20px;
+    width: 66.76%;
+}
+
+
+
+@media(min-width:600px){
+    #pergunta{
+        font-size: 40px;
+        margin-top: 110px;
+    }
+    #final{
+     margin-top: 90px;
+     text-align: center;
+     padding: 150px;
+     font-size: 30px;     
+    }
+    .retangulos{
+     padding: -90px;
+    }
+    #botoes{
+     margin-top: 50px;
+    }
+    footer h2{
+        text-align: center;
+    }
+    #home{
+        height: calc(100lvh - 140px);
+        overflow: initial;
+    }
+    body{
+        overflow: hidden;
+    }
+
+    #info{
+        display: flex;
+        align-items: center;
+    }
+
+    #animacao img{
+        width: 15%;
+    }
+
+}
+
+@keyframes desaparecer {
+    0%{
+        right: 100%;
+        opacity: 0;
+    }
+    1%{
+        right: 0;
+        opacity: 0;
+    }
+    4%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    99%{
+        opacity: 0; 
+        right: 0;
+    }
+    100%{
+        right: 100%
+    }
+}

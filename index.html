@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equiz - Quiz de Ética</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/Justiça.svg" type="image/x-icon">
+    
+</head>
+<body>
+
+    <div style="width: 100lvw; height: 100lvh; z-index: 30; display: flex; justify-content: center; align-items: center; position: absolute; background-color: white;" id="animacao">
+        <img src="./img/Composição-1_00000.gif" alt="">
+    </div>
+    
+    <div id="info">
+        <h1>Bem vindo ao quiz de Ética</h1>
+        <h2>O quiz irá abordar a Ética no uso das redes sociais</h2>
+        <h2>Responda as perguntas que irão aparecer na sua tela</h2>
+        <h3>“Boa Sorte”</h3>
+        <h4>Use as setas para alternas as perguntas</h4>
+    </div>
+    
+    <header><h1>Equiz</h1></header>
+    <section id="home">
+        <h2 id="pergunta">O que é ética para a internet e redes sociais?</h2>
+        
+        <div id="progresso">
+            <div></div>
+        </div> 
+        
+        <div class="respostas">
+            <div class="retangulos"></div>
+            <div class="retangulos"></div>
+            <div class="retangulos"></div>
+            <div class="retangulos"></div>
+        </div>
+        
+        
+        <div style="display: flex; flex-direction: column;" id="botoes">
+            
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+                <button id="voltar" class="setas" style="rotate: -90deg;">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Camada_2" viewBox="0 0 139.3 139.3" width="30px" fill="white">
+                        
+                        
+                        <rect class="cls-1" x="62.08" y="42.25" width="15.14" height="97.05" rx="7.57" ry="7.57"/>
+                        <rect class="cls-1" x="93.12" y="-12.86" width="15.14" height="102.94" rx="7.57" ry="7.57" transform="translate(2.19 82.51) rotate(-45)"/>
+                        <rect class="cls-1" x="31.04" y="-12.86" width="15.14" height="102.94" rx="7.57" ry="7.57" transform="translate(38.61 -15.99) rotate(45)"/>
+                        <rect class="cls-1" x="62.08" y="42.25" width="15.14" height="97.05" rx="7.57" ry="7.57"/>
+                        <rect class="cls-1" x="93.12" y="-12.86" width="15.14" height="102.94" rx="7.57" ry="7.57" transform="translate(2.19 82.51) rotate(-45)"/>
+                        <rect class="cls-1" x="31.04" y="-12.86" width="15.14" height="102.94" rx="7.57" ry="7.57" transform="translate(38.61 -15.99) rotate(45)"/>
+                        
+                    </svg>
+                    
+                </button>
+                
+                <button id="avancar" class="setas" style="rotate: 90deg;">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Camada_2" viewBox="0 0 139.3 139.3" width="30px" fill="white">
+                        
+                        <rect class="cls-1" x="62.08" y="42.25" width="15.14" height="97.05" rx="7.57" ry="7.57"/>
+                        <rect class="cls-1" x="93.12" y="-12.86" width="15.14" height="102.94" rx="7.57" ry="7.57" transform="translate(2.19 82.51) rotate(-45)"/>
+                        <rect class="cls-1" x="31.04" y="-12.86" width="15.14" height="102.94" rx="7.57" ry="7.57" transform="translate(38.61 -15.99) rotate(45)"/>
+                        <rect class="cls-1" x="62.08" y="42.25" width="15.14" height="97.05" rx="7.57" ry="7.57"/>
+                        <rect class="cls-1" x="93.12" y="-12.86" width="15.14" height="102.94" rx="7.57" ry="7.57" transform="translate(2.19 82.51) rotate(-45)"/>
+                        <rect class="cls-1" x="31.04" y="-12.86" width="15.14" height="102.94" rx="7.57" ry="7.57" transform="translate(38.61 -15.99) rotate(45)"/>
+                        
+                    </svg>
+                    
+                </button>
+            </div>
+
+            <a href="" style="width: 100%; height: 50px; background-color: #133c6d; color: white; border: none; font-size: 20px; border-radius: 10px; margin-top: 20px; align-items: center; justify-content: center; text-decoration: none;" id="recomecar">Tente Novamente</a>
+            
+        </div>
+
+    </section>
+    <footer>
+        <h1>Por: Pedro Henrique Fabiano de Almeida</h1>
+        <h2>© Direitos reservados</h2>
+    </footer>
+
+    <div id="final">
+        <h1 style="width: 66.76%; text-align: center;" id="parabens">Não fez mais do que a obrigação</h1>
+        <h2 style="font-weight: 300;">Seu tempo: <br> <span id="tempo"></span></h2>
+        <h3 style="width: 66.76%;"><span id="acertos"></span> Acertos<br>Score: <span id="pontuacao"></span></h3>
+        <h4>Mas se quiser você pode tentar novamente</h3>
+    </div>    
+    
+</body>
+<script src="javascript.js"></script>
+</html>

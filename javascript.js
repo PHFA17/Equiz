@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
             answerButton.addEventListener("click", () => {
                 answer = index;
                 checkAnswer();
-                setTimeout(() => {nextQuestion();}, 3000);
+                setTimeout(() => {nextQuestion();}, 1000);
             })
     })
 

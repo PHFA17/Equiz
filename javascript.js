@@ -146,10 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         final.classList.remove("show")
     })
 
-    function checkAnswer() {
-
-        console.log(currentQuestion + "> CurrentQuestion");
-        
+    function checkAnswer() {       
 
         if(questions[currentQuestion].answered === 0){
             answeredQuestions ++;
@@ -205,9 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 currentQuestion++
             }
         }
-
-        console.log("currentQuestion" + currentQuestion);
-        
     
         // Atualiza o progresso na barra de progresso
         updateProgress();
@@ -218,21 +212,18 @@ document.addEventListener("DOMContentLoaded", () => {
         // Checa se a pergunta atual já foi respondida e ajusta as bordas dos botões
         checkIfAnswered();
     
-        console.log("Pergunta atual:", currentQuestion);
         var congratsText = "";
 
         // Verifica se todas as perguntas foram respondidas para mostrar o resultado final
         if (answeredQuestions >= questions.length) {
             var score = (rightAnswers / questions.length) * 100;
-            console.log(seconds + " aqui3");
+
             if(finalFirstInteraction === 0){
                     clearInterval(timerId);
-                    console.log("entrouScore");
                     
                 timerInteractionCount = 1;
                 seconds = seconds - (questions.length * 3); // Ajusta o tempo total, retirando o tempo de transição
         
-                    console.log(seconds + " aqui1");
                     
                 // Ajusta a pontuação de acordo com o tempo
                 if (seconds <= (6 * questions.length)) {
@@ -278,22 +269,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                 }
             }
-
-            console.log(seconds + " aqui2");
     
             // Calcula minutos e segundos restantes
             const minutes = Math.floor(seconds / 60);
             seconds = seconds % 60;
     
-            console.log(`Tempo final: ${minutes}:${seconds}`);
-    
             // Mostra o resultado final
             if(finalFirstInteraction === 0){
                 finalFirstInteraction = 1;
                 final.classList.add("show");
-                console.log(finalFirstInteraction + "FFI 1");
             }else if((finalFirstInteraction === 1) && (currentQuestion === questions.length)){
-                console.log(finalFirstInteraction + "FFI 2");
                 final.classList.add("show");
             }
             const rightAnswersText = document.getElementById("acertos")
@@ -309,7 +294,6 @@ document.addEventListener("DOMContentLoaded", () => {
             congratulations.innerHTML = congratsText
             const timeTxt = document.getElementById("tempo")
             if(seconds <= 6 * questions.length){
-                console.log('minsec' + minutes + "oi" + seconds);
                 
                 timeTxt.innerHTML = "Tempo Invalido"
             }else{
@@ -322,7 +306,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if(currentQuestion > 0){
             currentQuestion --;
         }
-        console.log(currentQuestion);
         updateTexts();
         checkIfAnswered();
     }
@@ -368,13 +351,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let timerId
 
     function timer(){
-        console.log("entrou");
         
         if(finalFirstInteraction === 0){
-            console.log("entrou2");
             timerId = setInterval(() => {
                 seconds ++;
-                console.log("oi");
                 
             }, 1000);
         }

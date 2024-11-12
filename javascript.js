@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     clearInterval(timerId);
                     
                 timerInteractionCount = 1;
-                seconds = seconds - (questions.length * 3); // Ajusta o tempo total, retirando o tempo de transição
+                seconds = seconds - (questions.length * 1); // Ajusta o tempo total, retirando o tempo de transição
         
                     
                 // Ajusta a pontuação de acordo com o tempo

@@ -29,73 +29,74 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const questions = [
         {
-            question: "Como interagir com outras pessoas nas redes sociais?",
+            question: "Como privacidade e segurança digital se distinguem em suas funções no ambiente online?",
             answers: { 
-                    a: "Ridicularizar a aparência da pessoa",
-                    b: "Interagir de forma positiva com os outros",
-                    c: "Falar mentiras para deixar os outros mau", 
-                    d: "Tentar ganhar uma discussão com xingamentos" },
+                    a: "Privacidade trata do controle de dados pessoais, enquanto segurança foca na proteção contra ameaças externas.",
+                    b: "Privacidade é irrelevante no cenário atual, sendo a segurança essencial para evitar vazamentos.",
+                    c: "Privacidade restringe-se a credenciais, enquanto segurança aborda ferramentas técnicas.", 
+                    d: "Não há diferença prática, ambas visam proteger dados pessoais de forma integrada." },
+            correct: "a",
+            answered: 0
+        },
+      
+        {
+            question: "Quais os efeitos predominantes do uso excessivo de redes sociais sobre a saúde mental e o bem-estar social?",
+            answers: { 
+                    a: "O uso intensivo das redes sociais fomenta a saúde mental ao fortalecer vínculos e mitigar o isolamento social.",
+                    b: "O uso excessivo contribui para o aumento da ansiedade, depressão e alienação social, sobretudo em contextos de constante comparação.",
+                    c: "O impacto das redes sociais na saúde mental é irrelevante e de curta duração.", 
+                    d: "O uso moderado das redes sociais promove equilíbrio emocional e bem-estar psicológico." },
             correct: "b",
             answered: 0
         },
         {
-            question: "Qual a forma responsável de se usar a tecnologia?",
+            question: "Quando o compartilhamento de dados pessoais online é eticamente inaceitável?",
             answers: { 
-                    a: "Ficar o dia todo no celular",
-                    b: "Compartilhar dados de outras pessoas na rede",
-                    c: "Ter consciência de quanto tempo deve ficar no aparelho eletrônico", 
-                    d: "Espalhar noticias falsas" },
-            correct: "c",
-            answered: 0
-        },
-        {
-            question: "Quais os direitos digitais?",
-            answers: { 
-                    a: "São as garantias legais que protegem as pessoas no ambiente online",
-                    b: "Você pode fazer o que quiser online",
-                    c: "Tudo o que você compartilha pode ser usado por empresas", 
-                    d: "Os direitos digitais são irrelevantes" },
-            correct: "a",
-            answered: 0
-        },
-        {
-            question: "Qual das alternativas que falam sobre sustentabilidade digital ",
-            answers: { 
-                    a: "Sustentabilidade digital não é importante, já que a tecnologia não tem impacto na vida",
-                    b: "A sustentabilidade digital só se aplica a grandes empresas",
-                    c: "A prioridade deve ser sempre a inovação tecnológica, não a sustentabilidade", 
-                    d: "É o conceito de utilizar a tecnologia de maneira que minimize os impactos ambientais e sociais" },
+                    a: "Divulgar informações verificadas para informar o público.",
+                    b: "Participar de discussões públicas online de forma construtiva.",
+                    c: "Publicar conteúdo educativo para promover o debate social.", 
+                    d: "Expor dados pessoais sem consentimento, infringindo a privacidade e potencialmente causando danos." },
             correct: "d",
             answered: 0
         },
         {
-            question: "Selecione o que é inclusão nas redes",
+            question: "Qual a relevância da ética na implementação de inteligência artificial nas redes sociais, sobretudo no que tange aos direitos dos usuários?",
             answers: { 
-                    a: "Significa que só as pessoas de alto escalão podem postar coisas nas redes",
-                    b: "Significa garantir que todas as pessoas, independente de suas condições, possam participar de maneira igualitária",
-                    c: "A inclusão só é necessária para alguns grupos, nem todos devem participar", 
-                    d: "Quem não consegue acompanhar o ritmo ou as tendências das redes sociais, não deve fazer parte delas" },
-            correct: "b",
+                    a: "A ética na IA não impacta a funcionalidade das redes sociais, já que os algoritmos operam sem considerar aspectos éticos.",
+                    b: "A ética na IA é uma responsabilidade exclusiva dos desenvolvedores, sem efeitos diretos sobre a experiência do usuário.",
+                    c: "A ética na IA é essencial para garantir decisões justas, prevenindo discriminação e protegendo os direitos fundamentais dos usuários.", 
+                    d: "A ética na IA não influencia as interações dos usuários nas plataformas sociais." },
+            correct: "c",
             answered: 0
         },
         {
-            question: "Qual o modo mais responsável de postar um conteúdo na web",
+            question: "Como a cultura do cancelamento afeta a liberdade de expressão e a diversidade de opiniões nas redes sociais?",
             answers: { 
-                    a: "Envolve verificar a veracidade das informações antes de publicá-las, respeitar os direitos autorais entre outras",
-                    b: "Poste qualquer coisa que chame atenção, mesmo que você não tenha certeza se é verdadeira",
-                    c: "Basta copiar e colar, ninguém vai se importar com os direitos autorais na internet", 
-                    d: "O objetivo principal de postar na web é provocar reações fortes, então não importa se o conteúdo é ofensivo" },
+                    a: "A cultura do cancelamento silencia vozes dissidentes, promove autocensura e limita a liberdade de expressão.",
+                    b: "A cultura do cancelamento não impacta significativamente a expressão pública.",
+                    c: " A cultura do cancelamento promove a inclusão e a diversidade de opiniões nas redes sociais.", 
+                    d: "A cultura do cancelamento fortalece o debate público ao eliminar discursos prejudiciais." },
             correct: "a",
             answered: 0
         },
         {
-            question: "Até onde vai a liberdade de expressão na internet",
+            question: "Qual deve ser o papel das plataformas digitais na mitigação do cyberbullying e na salvaguarda do bem-estar dos usuários?",
             answers: { 
-                    a: "A liberdade de expressão na internet é ilimitada",
-                    b: "A liberdade de expressão é um direito absoluto",
-                    c: "Não inclui o direito de disseminar discurso de ódio, violência, desinformação ou calúnia", 
-                    d: "Na internet, você tem o direito de ofender, humilhar ou ameaçar quem quiser" },
+                    a: "As plataformas não possuem obrigação legal ou moral de intervir no comportamento dos usuários ou no conteúdo gerado por eles.",
+                    b: "A responsabilidade sobre os atos dos usuários deve ser exclusivamente atribuída aos próprios indivíduos, sem qualquer intervenção ou regulamentação por parte das plataformas.",
+                    c: "As plataformas têm o dever de adotar políticas proativas e transparentes no enfrentamento do cyberbullying, incluindo a implementação de sistemas robustos de denúncia, monitoramento e penalização de condutas abusivas.", 
+                    d: "As plataformas devem garantir liberdade absoluta de expressão, sem restrições a conteúdos, independentemente de seu potencial danoso ou abusivo." },
             correct: "c",
+            answered: 0
+        },
+        {
+            question: "Como a ética digital influencia a construção e a preservação da reputação profissional de indivíduos em ambientes virtuais?",
+            answers: { 
+                    a: "Comportamentos éticos digitais têm impacto marginal na reputação profissional, sendo irrelevantes no contexto das interações virtuais.",
+                    b: "A adesão a princípios éticos digitais reforça a reputação profissional, cultivando confiança e ampliando oportunidades, especialmente em redes digitais interconectadas.",
+                    c: "A ética digital pode comprometer a reputação profissional ao restringir excessivamente a liberdade de expressão no contexto online, limitando o debate.", 
+                    d: "A reputação profissional é indissociável do desempenho no ambiente corporativo, não sendo afetada pela conduta ou imagem digital de um indivíduo." },
+            correct: "b",
             answered: 0
         },
     ];
@@ -127,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
             answerButton.addEventListener("click", () => {
                 answer = index;
                 checkAnswer();
-                setTimeout(() => {nextQuestion();}, 1000);
+                setTimeout(() => {nextQuestion();}, 3000);
             })
     })
 
@@ -136,7 +137,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const final = document.getElementById("final");
     forwardArrow.addEventListener("click", () => {
         
-        if((questions[(currentQuestion - 1)].answered === 1) || (answeredQuestions != questions.length - 1)){
+        if (
+            (questions[currentQuestion - 1] && questions[currentQuestion - 1].answered === 1) || 
+            answeredQuestions !== questions.length - 1
+        ) {
             nextQuestion();
         }
         
@@ -146,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         final.classList.remove("show")
     })
 
-    function checkAnswer() {       
+    function checkAnswer() {   
 
         if(questions[currentQuestion].answered === 0){
             answeredQuestions ++;
@@ -202,6 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 currentQuestion++
             }
         }
+        
     
         // Atualiza o progresso na barra de progresso
         updateProgress();
@@ -217,12 +222,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // Verifica se todas as perguntas foram respondidas para mostrar o resultado final
         if (answeredQuestions >= questions.length) {
             var score = (rightAnswers / questions.length) * 100;
-
             if(finalFirstInteraction === 0){
                     clearInterval(timerId);
                     
                 timerInteractionCount = 1;
-                seconds = seconds - (questions.length * 1); // Ajusta o tempo total, retirando o tempo de transição
+                seconds = seconds - (questions.length * 3); // Ajusta o tempo total, retirando o tempo de transição
         
                     
                 // Ajusta a pontuação de acordo com o tempo
@@ -269,10 +273,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                 }
             }
+
     
             // Calcula minutos e segundos restantes
             const minutes = Math.floor(seconds / 60);
             seconds = seconds % 60;
+    
     
             // Mostra o resultado final
             if(finalFirstInteraction === 0){
@@ -300,6 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 timeTxt.innerHTML = minutes + " Min : " + seconds + " Seg"
             }
         }
+        console.log(currentQuestion + "> CurrentQuestion");
     }
 
     function lastQuestion() {
@@ -308,6 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         updateTexts();
         checkIfAnswered();
+        console.log(currentQuestion + "> CurrentQuestion");
     }
 
     function checkIfAnswered(){

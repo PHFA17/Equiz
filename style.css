@@ -206,18 +206,22 @@ body:has(#final.show) #progresso{
 .retangulos:nth-child(1)::before{
     content: "A- ";
     margin-right: 5px;
+    font-weight: bold;
 }
 .retangulos:nth-child(2)::before{
     content: "B- ";
     margin-right: 5px;
+    font-weight: bold;
 }
 .retangulos:nth-child(3)::before{
     content: "C- ";
     margin-right: 5px;
+    font-weight: bold;
 }
 .retangulos:nth-child(4)::before{
     content: "D- ";
     margin-right: 5px;
+    font-weight: bold;
 }
 
 #final{

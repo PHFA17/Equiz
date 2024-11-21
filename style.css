@@ -263,7 +263,7 @@ body:has(#final.show) #botoes{
 }
 
 body:has(#final.show) #progresso{
-    bottom: 150px;
+    bottom: 80px;
     z-index: 23;
     transition: 0s;
 }
@@ -273,7 +273,11 @@ body:has(#final.show) #avancar{
 }
 
 body:has(#final.show) #avancar{
-    background-color: #3b4d63;
+    background-color: rgb(62, 71, 82);
+}
+
+body:has(#final.show) #home #pergunta, #respostas{
+    height: 0;
 }
 
 #final h1{
